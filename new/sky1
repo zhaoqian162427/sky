@@ -1,0 +1,89 @@
+#include <stdio.h>
+
+#define N 80
+
+void fun(int *w,int p,int n)
+
+{	/*int i,j=0,k=0,b[N];
+
+	if(p>15)
+
+		printf("data error\n");
+
+	else
+
+	{for(i=0;i<=p;i++)
+
+		{b[i]=w[i];
+
+		k++;}
+
+		b[i]=0;
+
+		for(i=0;i<N-k-1;i++)
+
+		w[i]=w[k+i];
+
+		do
+
+		{w[i++]=b[j++];}
+
+		while(b[j]!='\0');
+
+		w[i]='\0';
+
+	}这是我自己写的程序有待修改*/
+
+	int x,j,ch;
+
+	for(x=0;x<=p;x++)
+
+	{ch=w[0];
+
+	for(j=1;j<n;j++)
+
+		/*通过for循环语句，将p+1到n-1（含n-1）之间的数组元素依次
+
+		向前移动p+1个存储单元*/
+
+	{w[j-1]=w[j];
+
+	}
+
+	w[n-1]=ch;
+
+	/*将0到p个数组元素逐一赋给数组w[n-1]*/}
+
+		
+
+}
+
+main()
+
+{   int a[N]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+
+	int i,p,n=15;
+
+	printf("The orignal data:\n");
+
+	for(i=0;i<n;i++)
+
+		printf("%3d",a[i]);
+
+	printf("\n\nEnter p:");
+
+	scanf("%d",&p);
+
+	fun(a,p,n);
+
+	printf("\nthe data after moving:\n");
+
+	for(i=0;i<n;i++)
+
+		printf("%3d",a[i]);
+
+	printf("\n\n");
+
+
+
+}

@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+void main()
+
+{system("color af");
+
+		char ch;	scanf("%c",&ch);	ch=(ch>='A'&& ch<='Z')?(ch+32):ch;	printf("%c\n",ch);}
